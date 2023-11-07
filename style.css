@@ -1,8 +1,28 @@
-.ex3{
+.katakana_name_scale{
     font-size:85%;
-    line-height:0%;
 }
-.ex4{
+.kanji_name_scale{
     font-size:165%;
-    line-height:0%;
+}
+.set_line_height{
+    line-height:5%;
+}
+.name_left_scale{
+    margin-left:5%;
+}
+.name_color {
+    background-color: rgb(53, 41, 41);
+    color: white;
+    width: 100%;
+    display: inline-block;
+    margin-left: -5;
+    margin-top: -5;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.movie_theater_background {
+    background-image: url('MovieTheater.jpg'); /* MovieTheater.jpg へのパス */
+    background-size: cover; /* 画像を要素全体に合わせる */
 }
