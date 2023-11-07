@@ -1,5 +1,6 @@
 .katakana_name_scale{
-    font-size:85%;
+    margin-top: 1.8%;
+    font-size:100%;
 }
 .kanji_name_scale{
     font-size:165%;
@@ -15,14 +16,20 @@
     color: white;
     width: 100%;
     display: inline-block;
-    margin-left: -5;
-    margin-top: -5;
+}
+.centered-text {
+    text-align: center; /* テキストを中央に配置 */
+    display: inline; /* テキストをインライン要素にする */
 }
 body {
     margin: 0;
     padding: 0;
 }
 .movie_theater_background {
-    background-image: url('MovieTheater.jpg'); /* MovieTheater.jpg へのパス */
-    background-size: cover; /* 画像を要素全体に合わせる */
+    background-image: url('images/MovieTheater.jpg'); /* 画像ファイルへの相対パス */
+    background-size: 100% 80%; /* 幅を100%、高さを80%に設定 */
+    background-repeat: no-repeat; /* 背景画像の繰り返しを無効化 */
+    background-position: center top; /* 背景画像を中央に配置 */
+    height: 0;
+    padding-bottom: 56.25%; /* アスペクト比 16:9 の場合の例 */
 }
