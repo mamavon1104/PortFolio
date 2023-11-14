@@ -1,41 +1,82 @@
-.katakana_name_scale{
-    margin-top: 1.8%;
-    font-size:100%;
-}
-.kanji_name_scale{
-    font-size:165%;
-}
-.set_line_height{
-    line-height:5%;
-}
-.name_left_scale{
-    margin-left:5%;
-}
-.name_color {
-    background-color: rgb(53, 41, 41);
-    color: white;
-    width: 100%;
-    display: inline-block;
-}
-.dai {
-    background-color: rgba(95, 35, 0, 0.877);
-    width: 100%;
-    display: inline-block;
-    padding-bottom: 20.25%; /* アスペクト比 16:9 の場合の例 */
-}
-.centered-text {
-    text-align: center; /* テキストを中央に配置 */
-    display: inline; /* テキストをインライン要素にする */
-}
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
+
+.set_top_scale {
+    margin-top: 1.8%;
+}
+
+.set_line_height {
+    line-height: 1vh;
+}
+
+.name_set {
+    margin-left: 14%;
+}
+
+.name_color {
+    background-color: #753B3D;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    height: 10vh;
+}
+
+.separator {
+    background-color: rgba(173, 173, 173, 0.877);
+    width: 100%;
+    display: block;
+    height: 12vh;
+}
+
+.centered-text {
+    text-align: center;
+    display: inline;
+}
+
 .movie_theater_background {
-    background-image: url('images/MovieTheater.jpg'); /* 画像ファイルへの相対パス */
-    background-size: 100% 100%; /* 幅を100%、高さを80%に設定 */
-    background-repeat: no-repeat; /* 背景画像の繰り返しを無効化 */
-    background-position: center top; /* 背景画像を中央に配置 */
-    height: 0;
-    padding-bottom: 42.25%; /* アスペクト比 16:9 の場合の例 */
+    background-image: url('images/MovieTheater.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-bottom: 44.25%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* 上から下に配置するように変更 */
+    padding: 0;
+}
+
+.image-list {
+    display: flex;
+    justify-content: space-between; /* 左右に配置するように変更 */
+}
+
+.image {
+    width: 12%;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    width: 16%;
+    height: auto;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
 }
