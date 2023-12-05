@@ -11,15 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
         if (i % 2 === 0) {
             images[0].style.marginRight = "auto";  // 修正
             images[0].style.paddingLeft = "10%";
-            imageContainers[i].style.background = 'linear-gradient(to left,#FFF0B8,#FFD782,#FFD782)';
+            imageContainers[i].style.background = 'linear-gradient(to left,#FFF0B8,#FFF0B8,#FFD782)';
             imageText.style.left = "30%";
-            gitLink.style.right = "20%";
+            gitLink.style.right = "17%";
         } else {
             images[0].style.marginLeft = "auto";  // 修正
             images[0].style.paddingRight = "10%";
             imageContainers[i].style.background = 'linear-gradient(to right,#CEF5FF,#E7C7FF)';
             imageText.style.right = "30%";
-            gitLink.style.left = "20%";
+            gitLink.style.left = "17%";
         }
     }
 });
