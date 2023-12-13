@@ -87,7 +87,7 @@ body {
     padding-bottom: 15px;
 }
 .git-images{
-    width: 8vw;
+    width: 6vw;
     height: auto;
     padding-left: 12%;
 }
@@ -129,4 +129,44 @@ body {
 }
 #Skill img {
     max-width: 100%;
+}
+@keyframes curtain {
+    from {
+      opacity: 0;
+      top: -50px;
+    }
+  
+    20% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 1;
+      top: 100vh;
+    }
+  }
+
+@keyframes sway1 {
+    from {
+        transform: translate3d(-50%, 0, 0) rotate(-10deg);
+    }
+    to {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+@keyframes sway2 {
+    from {
+        transform: translate3d(50%, 0, 0) rotate(10deg);
+    }
+    to {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}  
+.js-scroll-curtain.is-animated .item:nth-child(1) {
+    animation: curtain 4s linear forwards, sway1 4s ease-in-out alternate;
+}
+.js-scroll-curtain.is-animated .item:nth-child(2) {
+    left: 56%;
+    animation: curtain 4s linear forwards, sway2 4s ease-in-out alternate;
+    animation-delay: 0.3s;
 }
