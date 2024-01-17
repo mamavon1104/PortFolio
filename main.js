@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
             images[0].style.marginLeft = "10%";
             imageContainers[i].style.background = 'linear-gradient(to left,#FFF0B8,#FFF0B8,#FFD782)';
             imageText.style.left = "30%";
-            gitLink.style.right = "22%";
+            gitLink.style.right = "16%";
         } else {
             images[0].style.marginLeft = "auto";  // 修正
             images[0].style.marginRight = "10%";
             imageContainers[i].style.background = 'linear-gradient(to right,#CEF5FF,#E7C7FF)';
-            imageText.style.right = "30%";
-            gitLink.style.left = "27%";
+            imageText.style.right = "32%";
+            gitLink.style.left = "21%";
         }
     }
 });
