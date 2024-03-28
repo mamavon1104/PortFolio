@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
     var imageList = document.getElementById("imageList");
     var imageContainers = imageList.getElementsByClassName("image-container");
 
