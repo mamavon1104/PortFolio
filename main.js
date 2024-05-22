@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
             images[0].style.marginLeft = "auto";  // 修正
             images[0].style.marginRight = "10%";
             imageContainers[i].style.background = 'linear-gradient(to left, #8b0000, #320000, #320000, #320000, #000000, #000000)';
-            
             imageText.style.right = "32%";
             gitLink.style.left = "21%";
         }
