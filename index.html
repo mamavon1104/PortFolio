@@ -1,28 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <!-- ツールチップ用のJS -->
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/9-3-1/js/9-3-1.js"></script>
 </head>
-    <header class="set_line_height header">
+
+<body>
+    <header class="header set_line_height">
         <div class="name_set">
             <h4>ハットリ リョウタ</h4>
-            <h2>服部 綾太</h2>   
+            <h2>服部 綾太</h2>
         </div>
     </header>
+
     <section id="about_me">
         <div class="separator text-center">自己紹介</div>
         <div class="aboutme">
-            <img class="face" src="images/300x300.png">
+            <img class="face" src="images/300x300.png" alt="My Face">
         </div>
     </section>
-    <section id="my_game" >
-        <div class="separator text-center">作ったゲーム </div>
+
+    <section id="my_game">
+        <div class="separator text-center">作ったゲーム</div>
         <ul id="imageList">
             <li class="image-container">
-                <img src="images/game_icon/ColorBulletIcon.png" alt="Image 1" class="image">
+                <img src="images/game_icon/ColorBulletIcon.png" alt="Color Bullet Icon" class="image">
                 <div class="image-text">
                     <p class="description-text">
                         色達が色々、十人十色？<br>
@@ -31,141 +41,133 @@
                     </p>
                     <p class="summary-text">
                         色が好きだったので、色にまつわるゲームを作りました。<br>
-                        メニュー画面の裏のアニメーションなど、常に動いている画面を作りました。<br>
-                        <br>
-                        対戦ゲームとコントローラーの接続両方を始めてやったゲームで、<br>
+                        メニュー画面の裏のアニメーションなど、常に動いている画面を作りました。<br><br>
+                        対戦ゲームとコントローラーの接続両方を初めてやったゲームで、<br>
                         UIとコントローラーの接続で開発が難航しました。<br>
                     </p>
                 </div>
                 <a href="https://github.com/mamavon1104/shooting2D.git" class="git-links">
                     これがソースコードです。<br>
                     <div>
-                        <img src="images/GitHub.png" class="git-images">
+                        <img src="images/GitHub.png" class="git-images" alt="GitHub">
                     </div>
                 </a>
             </li>
             <li class="image-container">
-                <img src="images/game_icon/AnimalEscapeIcon.png" alt="Image 2" class="image">
+                <img src="images/game_icon/AnimalEscapeIcon.png" alt="Animal Escape Icon" class="image">
                 <div class="image-text">
                     <p class="description-text">
-                    自分の相棒を抱えて投げてジャンプする、<br>
-                    脱出を目指すアクションゲーム!
+                        自分の相棒を抱えて投げてジャンプする、<br>
+                        脱出を目指すアクションゲーム!
                     </p>
                     <p class="summary-text">
                         簡単な動きで出来る優しいアクションゲームです。<br>
                         ボタンを押す以外でも、上に乗ったら抱える状態に変化させるとか、<br>
-                        細かいプレイヤーの行動にも対応してあげる作品でした。<br>
-                    <br>
+                        細かいプレイヤーの行動にも対応してあげる作品でした。<br><br>
                         UniTaskやDotweenを初めて使ったゲームで、<br>
                         この作品を作りながら勉強しました。<br>
                     </p>
                 </div>
-                <a href="https://github.com/mamavon1104/animalGame" class="git-links"> 
+                <a href="https://github.com/mamavon1104/animalGame" class="git-links">
                     これがソースコードです。<br>
                     <div>
-                        <img src="images/GitHub.png" class="git-images">
+                        <img src="images/GitHub.png" class="git-images" alt="GitHub">
                     </div>
                 </a>
             </li>
             <li class="image-container">
-                <img src="images/game_icon/夢現少女Icon.png" alt="Image 3" class="image">
+                <img src="images/game_icon/夢現少女Icon.png" alt="夢現少女 Icon" class="image">
                 <div class="image-text">
                     <p class="description-text">
                         夢と現実を切り替えて！<br>
-                        城まで寝ながら歩いてく！<br>
+                        城まで寝ながら歩いてく！
                     </p>
                     <p class="summary-text">
                         2日間のゲームジャムで作成したアクションゲームです。<br>
                         夢と現実というコンセプトを主軸にし、イラストレーターさんやプランナーさんと<br>
-                        コミュニケーションを取りながら作成しました。<br>
-                        <br>
+                        コミュニケーションを取りながら作成しました。<br><br>
                         担当部分は、マップの作成とカメラの切り替えの部分です。<br>
                         2日間で大変貴重な体験をさせて貰いました。<br>
                     </p>
                 </div>
-                <a href="https://github.com/Hikanyan/AcquireGameJam-2023.git" class="git-links"> 
+                <a href="https://github.com/Hikanyan/AcquireGameJam-2023.git" class="git-links">
                     これがソースコードです。<br>
                     <div>
-                        <img src="images/GitHub.png" class="git-images">
+                        <img src="images/GitHub.png" class="git-images" alt="GitHub">
                     </div>
                 </a>
             </li>
             <li class="image-container">
-                <img src="images/image1.jpg" alt="Image 5" class="image">
-                <div class="image-text">
-                    <p class="description-text color_white">
+                <img src="images/image1.jpg" alt="Horror Game Image" class="image">
+                <div class="image-text color_white">
+                    <p class="description-text">
                         貴方はこの人形から逃げられる...?<br>
                         薄暗く紅いホラーゲーム...。
-                        
                     </p>
-                    <p class="summary-text color_white">
+                    <p class="summary-text">
                         学校の文化祭で作成したホラーゲームです。<br>
-                        3人4脚で学校生活と並行しながら一か月間制作を続けてきました。<br>
-                        <br>
+                        3人4脚で学校生活と並行しながら一か月間制作を続けてきました。<br><br>
                         担当部分は、マップの作成とカメラの切り替えの部分です。<br>
-                        2日間で大変貴重な体験をさせて貰いました。 <br>
+                        大変貴重な体験をさせて貰いました。<br>
                     </p>
                 </div>
-                <a href="https://github.com/e-mau/Akagiri_no_mori01" class="git-links"> 
+                <a href="https://github.com/e-mau/Akagiri_no_mori01" class="git-links">
                     これがソースコードです。<br>
                     <div>
-                        <img src="images/GitHub.png" class="git-images">
+                        <img src="images/GitHub.png" class="git-images" alt="GitHub">
                     </div>
                 </a>
             </li>
             <li class="image-container">
-                <img src="images/image1.jpg" alt="Image 4" class="image">
-            <div class="image-text">
-                <p class="description-text">
-                    説明の埋め込み<br>
-                </p>
-                <p class="summary-text">
-                    詳細の埋め込み
-                </p>
-            </div>
-            <a href="https://github.com/mamavon1104/ConnectFiveGame" class="git-links"> <!--このサイト変えなきゃ死ぬ-->
-                これがソースコードです。<br>
-                <div>
-                    <img src="images/GitHub.png" class="git-images">
+                <img src="images/image1.jpg" alt="Connect Five Game Image" class="image">
+                <div class="image-text">
+                    <p class="description-text">
+                        説明の埋め込み<br>
+                    </p>
+                    <p class="summary-text">
+                        詳細の埋め込み
+                    </p>
                 </div>
-            </a>
-        </li>
-    </ul>
+                <a href="https://github.com/mamavon1104/ConnectFiveGame" class="git-links">
+                    これがソースコードです。<br>
+                    <div>
+                        <img src="images/GitHub.png" class="git-images" alt="GitHub">
+                    </div>
+                </a>
+            </li>
+        </ul>
     </section>
-    <section id="Skill" >
+    <section id="Skill">
         <div class="separator text-center">スキル</div>
         <div id="images">
-            <ul>
+            <ul class="skill-list">
                 <li><img src="images/skill_icon/CSharp.png" class="cap" data-tippy-content="C#"></li>
-                <li><img src="images/skill_icon/unity-3d-logo-white.png" class="cap" data-tippy-content="UnityEngine"></li>
+                <li><img src="images/skill_icon/unity-3d-logo-white.png" class="cap" data-tippy-content="UnityEngine">
+                </li>
                 <li><img src="images/skill_icon/github.png" class="cap" data-tippy-content="GitHub"></li>
-                <li><img src="images/skill_icon/Visual-Studio-Logo.png" class="cap" data-tippy-content="VisualStudio"></li>
+                <li><img src="images/skill_icon/Visual-Studio-Logo.png" class="cap" data-tippy-content="VisualStudio">
+                </li>
                 <li><img src="images/skill_icon/VSCicon.png" class="cap" data-tippy-content="VisualStudioCode"></li>
             </ul>
-            <ul>
-                <li><img src="images/skill_icon/HTML.png" class="cap" data-tippy-content="Html" class="cap" data-tippy-content="Html"></li>
+            <ul class="skill-list">
+                <li><img src="images/skill_icon/HTML.png" class="cap" data-tippy-content="HTML"></li>
                 <li><img src="images/skill_icon/CSS.png" class="cap" data-tippy-content="CSS"></li>
                 <li><img src="images/skill_icon/JS.png" class="cap" data-tippy-content="JavaScript"></li>
                 <li><img src="images/skill_icon/Word.png" class="cap" data-tippy-content="Word"></li>
                 <li><img src="images/skill_icon/PowerPoint.png" class="cap" data-tippy-content="PowerPoint"></li>
                 <li><img src="images/skill_icon/Excel.png" class="cap" data-tippy-content="Excel"></li>
             </ul>
-            <ul>
+            <ul class="skill-list">
                 <li><img src="images/skill_icon/Slack.png" class="cap" data-tippy-content="Slack"></li>
                 <li><img src="images/skill_icon/sourcetree.png" class="cap" data-tippy-content="Sourcetree"></li>
-                <li><img src="images/skill_icon/kotlin.png" class="cap" data-tippy-content="Kotlin{AndroidStuido}"></li>
+                <li><img src="images/skill_icon/kotlin.png" class="cap" data-tippy-content="Kotlin (Android Studio)">
+                </li>
                 <li><img src="images/skill_icon/Trello.png" class="cap" data-tippy-content="Trello"></li>
             </ul>
         </div>
     </section>
-    <div class="separator text-center">　 　</div>
-    <div>
-        　 　                   
-    </div>
+    <div class="separator thin-separator"></div>
+    <div></div>
 </body>
-<!--ツールチップを出すためのJS-->
-<script src="https://unpkg.com/popper.js@1"></script>
-<script src="https://unpkg.com/tippy.js@5"></script>
-<!--ツールチップのJSを制御するためのJS-->
-<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/9-3-1/js/9-3-1.js"></script>
+
 </html>

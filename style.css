@@ -1,182 +1,169 @@
-/* @import url('https://fonts.googleapis.com/css2?family=DotGothic16:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chokokutai:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Slackside+One&display=swap');  これ */
-@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  font-family: "Shippori Mincho", sans-serif;
-  /* font-family: 'DotGothic16', sans-serif; */
-  /* font-family: 'Chokokutai', sans-serif; */
-  /* font-family: 'Slackside One', sans-serif;  使うとしたらこれかな...*/
-}
-#my_game ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Shippori Mincho', sans-serif;
 }
 
 .set_line_height {
-  line-height: 1vh;
+    line-height: 1vh;
 }
 
 .name_set {
-  padding-left: 12%;
+    padding-left: 12%;
 }
 
 .header {
-  background-color: #753b3d;
-  color: white;
-  width: 100%;
-  display: flex;
-  padding: 5px;
+    background-color: #753b3d;
+    color: white;
+    width: 100%;
+    display: flex;
+    padding: 5px;
 }
 
 .separator {
-  background: linear-gradient(to right, #f2f2f2, #737373);
-  /* background-color: rgba(207, 207, 207, 0.877); */
-  width: 100%;
-  height: 10%;
-  display: block;
-  display: flex;
-  padding: 10px, 10px, 10px, 10px;
+    background: linear-gradient(to right, #f2f2f2, #737373);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    padding: 10px;
 }
+
 .thin-separator {
-  background: linear-gradient(to right, #f2f2f2, #737373);
-  width: 100%;
-  height: 7%;
-  display: block;
-  display: flex;
-  padding: 10px, 10px, 10px, 10px;
-}
-.text-center {
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
+    height: 7%;
 }
 
-.centered-text {
-  text-align: center;
-  display: inline;
+.aboutme {
+    background: rgba(0, 0, 0, 0.658);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
 }
 
-.movie_theater_background {
-  width: 100%;
-  height: 100%;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center top;
+.face {
+    width: 175px;
+    margin-right: 40%;
 }
+
+#my_game ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .image-container {
-  position: relative;
-  display: inline-block;
-  display: flex;
-  flex-direction: column; /* 列方向に配置 */
-}
-.color_white {
-  color: #FFFFFF;
-}
-.image-text {
-  position: absolute;
-  top: 0;
-  color: rgb(0, 0, 0);
-  text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .image {
-  width: 15vw;
-  height: auto;
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
+    border-radius: 50%;
+    width: 15vw;
+    height: auto;
+    padding: 15px 0;
 }
+
+.image-text {
+    position: absolute;
+    top: 0;
+    color: black;
+    text-align: left;
+}
+
+.color_white {
+    color: #FFFFFF;
+}
+
 .git-images {
-  width: 8vw;
-  height: auto;
-  padding-left: 12%;
+    border-radius: 10%;
+    width: 8vw;
+    padding-left: 20%;
 }
+
+.git-links {
+    position: absolute;
+    bottom: 25%;
+    color: blue;
+}
+
 .description-text {
-  font-size: 22px; /* 説明文のテキストサイズを変更 */
+    font-size: 22px;
 }
 
 .summary-text {
-  font-size: 14px; /* 概要のテキストサイズを変更 */
-  padding-left: 15px;
+    font-size: 14px;
+    padding-left: 15px;
 }
-.aboutme {
-  background: rgba(0, 0, 0, 0.658);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 200px;
+
+#Skill {
+    background-color: #000000;
+    padding: 20px 0;
 }
-.face {
-  width: 175px;
-  margin-right: 40%;
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    margin: 0;
 }
-.git-links {
-  top: auto;
-  bottom: 25%;
-  position: absolute;
-  color: blue;
-}
-#Skill ul {
-  padding: 2px;
-  display: flex;
-  background-color: #000000;
-  margin: auto;
-}
+
 #Skill li {
-  width: 8%;
-  height: 8%;
-  padding: 20px;
+    width: 8%;
+    height: 8%;
+    padding: 20px;
 }
+
 #Skill img {
-  max-width: 100%;
+    max-width: 100%;
 }
+
 @keyframes curtain {
-  from {
-    opacity: 0;
-    top: -50px;
-  }
+    from {
+        opacity: 0;
+        top: -50px;
+    }
 
-  20% {
-    opacity: 1;
-  }
+    20% {
+        opacity: 1;
+    }
 
-  to {
-    opacity: 1;
-    top: 100vh;
-  }
+    to {
+        opacity: 1;
+        top: 100vh;
+    }
 }
 
 @keyframes sway1 {
-  from {
-    transform: translate3d(-50%, 0, 0) rotate(-10deg);
-  }
-  to {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
+    from {
+        transform: translate3d(-50%, 0, 0) rotate(-10deg);
+    }
+    to {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
 }
+
 @keyframes sway2 {
-  from {
-    transform: translate3d(50%, 0, 0) rotate(10deg);
-  }
-  to {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
+    from {
+        transform: translate3d(50%, 0, 0) rotate(10deg);
+    }
+    to {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
 }
+
 .js-scroll-curtain.is-animated .item:nth-child(1) {
-  animation: curtain 4s linear forwards, sway1 4s ease-in-out alternate;
+    animation: curtain 4s linear forwards, sway1 4s ease-in-out alternate;
 }
+
 .js-scroll-curtain.is-animated .item:nth-child(2) {
-  left: 56%;
-  animation: curtain 4s linear forwards, sway2 4s ease-in-out alternate;
-  animation-delay: 0.3s;
+    left: 56%;
+    animation: curtain 4s linear forwards, sway2 4s ease-in-out alternate;
+    animation-delay: 0.3s;
 }
