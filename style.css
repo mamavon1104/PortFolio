@@ -60,7 +60,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .image {
@@ -82,15 +82,27 @@ body {
 }
 
 .git-images {
-    border-radius: 10%;
     width: 8vw;
     padding-left: 20%;
 }
 
 .git-links {
     position: absolute;
-    bottom: 25%;
     color: blue;
+}
+
+.image-container {
+  position: relative; /* 追加 */
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.git-container {
+  position: absolute;
+  color: blue;
+  bottom: 45%; 
+  right: 100px;
 }
 
 .description-text {
@@ -104,7 +116,7 @@ body {
 
 #Skill {
     background-color: #000000;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .skill-list {
