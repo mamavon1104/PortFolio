@@ -70,6 +70,13 @@ body {
     padding: 15px 0;
 }
 
+.game-icon {
+  border-radius: 50%;
+  max-width: auto;
+  max-height: 242px;
+  padding: 15px 0;
+}
+
 .image-text {
     position: absolute;
     top: 0;
@@ -102,7 +109,7 @@ body {
 .git-container {
   position: absolute;
   color: blue;
-  bottom: 40%; 
+  bottom: 45%; 
   right: 100px;
 }
 .git-container span {
@@ -127,12 +134,12 @@ body {
 
 .skill-list {
     display: flex;
-    justify-content: center;
     padding: 2px;
     margin: 0;
 }
 
 #Skill li {
+    list-style: none; /* マーカーを削除 */
     width: 8%;
     height: 8%;
     padding: 20px;
