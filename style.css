@@ -96,15 +96,19 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  min-height: 272px;
 }
 
 .git-container {
   position: absolute;
   color: blue;
-  bottom: 45%; 
+  bottom: 40%; 
   right: 100px;
 }
-
+.git-container span {
+    font-size: 14px;
+    
+}
 .description-text {
     font-size: 22px;
 }
@@ -117,6 +121,8 @@ body {
 #Skill {
     background-color: #000000;
     padding: 10px 0;
+    z-index: 100; /* 必要に応じて調整 */
+    position: relative; /* スタッキングコンテキストを作成 */
 }
 
 .skill-list {
