@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         container.style.zIndex = index; // 上から下への順番でzindexを設定
     });
     for (let i = 0; i < imageContainers.length; i++) {
-        const images = imageContainers[i].getElementsByClassName("image");
+        const images = imageContainers[i].getElementsByClassName("game-icon");
         const imageText = imageContainers[i].getElementsByClassName("image-text")[0];
         const gitContainer = imageContainers[i].querySelector(".git-container");
 
