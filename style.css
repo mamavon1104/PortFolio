@@ -61,6 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    min-height: 272px;
 }
 
 .image {
@@ -71,10 +72,10 @@ body {
 }
 
 .game-icon {
-  border-radius: 50%;
-  max-width: auto;
-  max-height: 242px;
-  padding: 15px 0;
+    border-radius: 50%;
+    max-width: auto;
+    max-height: 242px;
+    padding: 15px 0;
 }
 
 .image-text {
@@ -98,24 +99,15 @@ body {
     color: blue;
 }
 
-.image-container {
-  position: relative; /* 追加 */
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  min-height: 272px;
+.git-container {
+    position: relative;
+    color: blue;
 }
 
-.git-container {
-  position: absolute;
-  color: blue;
-  bottom: 45%; 
-  right: 100px;
-}
 .git-container span {
     font-size: 14px;
-    
 }
+
 .description-text {
     font-size: 22px;
 }
@@ -128,8 +120,8 @@ body {
 #Skill {
     background-color: #000000;
     padding: 10px 0;
-    z-index: 100; /* 必要に応じて調整 */
-    position: relative; /* スタッキングコンテキストを作成 */
+    z-index: 100;
+    position: relative;
 }
 
 .skill-list {
@@ -139,7 +131,7 @@ body {
 }
 
 #Skill li {
-    list-style: none; /* マーカーを削除 */
+    list-style: none;
     width: 8%;
     height: 8%;
     padding: 20px;
@@ -191,4 +183,42 @@ body {
     left: 56%;
     animation: curtain 4s linear forwards, sway2 4s ease-in-out alternate;
     animation-delay: 0.3s;
+}
+
+.container-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.unityroom-container,
+.youtube-container,
+.git-container {
+    display: block; /* 画像の周囲に余白を作らないようにする */
+    margin: 0; /* 画像の周囲に余白を作らないようにする */
+    width: auto; /* 必要に応じて画像サイズを調整 */
+    height: 100px; /* 画像の高さを調整 */
+}
+
+.link-images {
+    width: 8vw;
+}
+
+.link-container {
+    position: absolute;
+    list-style-type: none; /* Bullet pointsを非表示にする */
+    display: flex; /* 横並びにする */
+    justify-content: space-between; /* 要素間のスペースを均等にする */
+    top: 152px; /* 要素を下に50px移動 */
+}
+
+.link-container li {
+    padding: 40px; /* 要素のパディングを削除 */
+}
+
+.git-links img {
+    display: block; /* 画像をブロック要素にすることで余白を削除 */
+    width: 80px; /* 画像の幅を設定 */
+    height: auto; /* 画像の高さを自動調整 */
 }
