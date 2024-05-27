@@ -201,10 +201,6 @@ body {
     height: 100px; /* 画像の高さを調整 */
 }
 
-.link-images {
-    width: 8vw;
-}
-
 .link-container {
     position: absolute;
     list-style-type: none; /* Bullet pointsを非表示にする */
