@@ -34,19 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
             images[0].style.marginLeft = "10%";
             imageContainers[i].style.background = 'linear-gradient(to left, #FFF0B8, #FFF0B8, #FFD782)';
             imageText.style.left = "30%";
-            container[i].style.right = "16%";
+            container[0].style.right = "20%";
         } else if (i !== 3) {
             images[0].style.marginLeft = "auto";
             images[0].style.marginRight = "10%";
             imageContainers[i].style.background = 'linear-gradient(to right, #CEF5FF, #E7C7FF)';
             imageText.style.right = "32%";
-            container[i].style.left = "21%";
+            container[0].style.left = "15%";
         } else {
             images[0].style.marginLeft = "auto";
             images[0].style.marginRight = "10%";
             imageContainers[i].style.background = 'linear-gradient(to left, #8b0000, #320000, #320000, #320000, #000000, #000000)';
             imageText.style.right = "32%";
-            container[i].style.left = "21%";
+            container[0].style.left = "15%";
         }
     }
 });

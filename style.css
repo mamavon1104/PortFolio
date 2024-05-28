@@ -89,12 +89,12 @@ body {
     color: #FFFFFF;
 }
 
-.git-images {
+.link-image {
     width: 8vw;
     padding-left: 20%;
 }
 
-.git-links {
+.links {
     position: absolute;
     color: blue;
 }
@@ -102,10 +102,6 @@ body {
 .git-container {
     position: relative;
     color: blue;
-}
-
-.git-container span {
-    font-size: 14px;
 }
 
 .description-text {
@@ -197,8 +193,6 @@ body {
 .git-container {
     display: block; /* 画像の周囲に余白を作らないようにする */
     margin: 0; /* 画像の周囲に余白を作らないようにする */
-    width: auto; /* 必要に応じて画像サイズを調整 */
-    height: 100px; /* 画像の高さを調整 */
 }
 
 .link-container {
@@ -206,15 +200,15 @@ body {
     list-style-type: none; /* Bullet pointsを非表示にする */
     display: flex; /* 横並びにする */
     justify-content: space-between; /* 要素間のスペースを均等にする */
-    top: 152px; /* 要素を下に50px移動 */
+    bottom: 235px; /* 要素を下に50px移動 */
 }
 
 .link-container li {
     padding: 40px; /* 要素のパディングを削除 */
 }
 
-.git-links img {
+.links img {
     display: block; /* 画像をブロック要素にすることで余白を削除 */
-    width: 80px; /* 画像の幅を設定 */
-    height: auto; /* 画像の高さを自動調整 */
+    width: 82px; /* 画像の幅を設定 */
+    height: 82px; /* 画像の高さを自動調整 */
 }
