@@ -43,7 +43,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 200px;
-    
     color: #f2f2f2;
 }
 
@@ -144,11 +143,9 @@ body {
         opacity: 0;
         top: -50px;
     }
-
     20% {
         opacity: 1;
     }
-
     to {
         opacity: 1;
         top: 100vh;
@@ -193,24 +190,214 @@ body {
 .unityroom-container,
 .youtube-container,
 .git-container {
-    display: block; /* 画像の周囲に余白を作らないようにする */
-    margin: 0; /* 画像の周囲に余白を作らないようにする */
+    display: block;
+    margin: 0;
 }
 
 .link-container {
     position: absolute;
-    list-style-type: none; /* Bullet pointsを非表示にする */
-    display: flex; /* 横並びにする */
-    justify-content: space-between; /* 要素間のスペースを均等にする */
-    bottom: 235px; /* 要素を下に50px移動 */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    bottom: 235px;
 }
 
 .link-container li {
-    padding: 40px; /* 要素のパディングを削除 */
+    padding: 40px;
 }
 
 .links img {
-    display: block; /* 画像をブロック要素にすることで余白を削除 */
-    width: 82px; /* 画像の幅を設定 */
-    height: 82px; /* 画像の高さを自動調整 */
+    display: block;
+    width: 82px;
+    height: 82px;
+}
+
+.media-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.media-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.media-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.media-items {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+}
+
+.media-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media-item.active {
+    opacity: 1;
+}
+
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.media-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.media-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.trailer-container {
+    width: 65%;
+}
+
+.trailer-container video {
+    width: 100%;
+    height: auto;
+}
+
+.screenshot-gallery {
+    width: 32%;
+}
+
+.screenshot-main img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.screenshot-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.screenshot-thumbnails img {
+    width: 48%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.media-item {
+    display: none;
+}
+
+.media-item.active {
+    display: block;
+}
+
+.media-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.media-items {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.nav-button.prev {
+    left: 10px;
+}
+
+.nav-button.next {
+    right: 10px;
+}
+
+.media-item {
+    display: none;
+}
+
+.media-item.active {
+    display: block;
 }

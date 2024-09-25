@@ -16,40 +16,86 @@ document.addEventListener("DOMContentLoaded", function() {
             colorIndex = 0;
         }
     });
-    
+        
     const imageList = document.getElementById("imageList");
     const imageContainers = document.querySelectorAll(".image-container");
 
-    // image-containerのz-indexを設定する
     imageContainers.forEach((container, index) => {
-        container.style.zIndex = index; // 上から下への順番でzindexを設定
-    });
-    for (let i = 0; i < imageContainers.length; i++) {
-        const images = imageContainers[i].getElementsByClassName("game-icon");
-        const imageText = imageContainers[i].getElementsByClassName("image-text")[0];
-        const container = imageContainers[i].getElementsByClassName("link-container");
+        container.style.zIndex = imageContainers.length - index;
 
-        if (i % 2 === 0) {
-            images[0].style.marginRight = "auto";
-            images[0].style.marginLeft = "10%";
-            imageContainers[i].style.background = 'linear-gradient(to left, #FFF0B8, #FFF0B8, #FFD782)';
-            imageText.style.left = "30%";
-            container[0].style.right = "20%";
-        } else if (i !== 3) {
-            images[0].style.marginLeft = "auto";
-            images[0].style.marginRight = "10%";
-            imageContainers[i].style.background = 'linear-gradient(to right, #CEF5FF, #E7C7FF)';
-            imageText.style.right = "32%";
-            container[0].style.left = "15%";
+        const youtubeContainer = container.querySelector(".youtube-container");
+        const mediaOverlay = container.querySelector(".media-overlay");
+        const closeButton = container.querySelector(".close-button");
+        const tabButtons = container.querySelectorAll(".tab-button");
+        const tabContents = container.querySelectorAll(".tab-content");
+
+        youtubeContainer.addEventListener("click", function(e) {
+            e.preventDefault();
+            mediaOverlay.style.display = "flex";
+        });
+
+        closeButton.addEventListener("click", function() {
+            mediaOverlay.style.display = "none";
+        });
+
+        tabButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const tab = this.dataset.tab;
+                tabButtons.forEach(btn => btn.classList.remove("active"));
+                tabContents.forEach(content => content.classList.remove("active"));
+                this.classList.add("active");
+                container.querySelector(`.tab-content.${tab}`).classList.add("active");
+            });
+        });
+
+        if (index % 2 === 0) {
+            container.querySelector(".game-icon").style.marginRight = "auto";
+            container.querySelector(".game-icon").style.marginLeft = "10%";
+            container.style.background = 'linear-gradient(to left, #FFF0B8, #FFF0B8, #FFD782)';
+            container.querySelector(".image-text").style.left = "30%";
+            container.querySelector(".link-container").style.right = "20%";
         } else {
-            images[0].style.marginLeft = "auto";
-            images[0].style.marginRight = "10%";
-            imageContainers[i].style.background = 'linear-gradient(to left, #8b0000, #320000, #320000, #320000, #000000, #000000)';
-            imageText.style.right = "32%";
-            container[0].style.left = "15%";
+            container.querySelector(".game-icon").style.marginLeft = "auto";
+            container.querySelector(".game-icon").style.marginRight = "10%";
+            container.style.background = 'linear-gradient(to right, #CEF5FF, #E7C7FF)';
+            container.querySelector(".image-text").style.right = "32%";
+            container.querySelector(".link-container").style.left = "15%";
         }
+    });
+
+    const mediaItems = document.querySelectorAll('.media-item');
+    const prevButton = document.querySelector('.nav-button.prev');
+    const nextButton = document.querySelector('.nav-button.next');
+    let currentIndex = 1;
+
+    function showItem(index) {
+        mediaItems.forEach(item => item.classList.remove('active'));
+        mediaItems[index - 1].classList.add('active');
+        currentIndex = index;
     }
+    function showPrevItem() {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 1) newIndex = mediaItems.length;
+        showItem(newIndex);
+    }
+    function showNextItem() {
+        let newIndex = currentIndex + 1;
+        if (newIndex > mediaItems.length) newIndex = 1;
+        showItem(newIndex);
+    }
+    
+    prevButton.addEventListener('click', showPrevItem);
+    nextButton.addEventListener('click', showNextItem);
+    // キーボードナビゲーションのサポート
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') showPrevItem();
+        if (e.key === 'ArrowRight') showNextItem();
+    });
 });
+
+function changeMainScreenshot(src, gameIndex) {
+    document.getElementById(`main-screenshot-${gameIndex}`).src = src;
+}
 
 const targets = document.querySelectorAll('.js-scroll-curtain');
 let isSet = false;

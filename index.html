@@ -20,7 +20,6 @@
             <h2>服部 綾太</h2>
         </div>
     </header>
-
     <section id="about_me">
         <div class="separator text-center">自己紹介</div>
         <div class="aboutme">
@@ -51,6 +50,36 @@
                         UIとコントローラーの接続で開発が難航しました。<br>
                     </p>
                 </div>
+                <div class="media-overlay" style="display: none;">
+                    <div class="media-content">
+                        <button class="close-button">&times;</button>
+                        <div class="media-tabs">
+                            <button class="tab-button active" data-tab="trailer">トレーラー</button>
+                            <button class="tab-button" data-tab="screenshots">スクリーンショット</button>
+                        </div>
+                        <div class="tab-content trailer active">
+                            <video controls poster="game1_thumbnail.jpg" width="100%">
+                                <source src="game1_trailer.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="tab-content screenshots">
+                            <div class="screenshot-main">
+                                <img src="game1_screenshot1.jpg" alt="Screenshot 1" id="main-screenshot-1">
+                            </div>
+                            <div class="screenshot-thumbnails">
+                                <img src="game1_screenshot1.jpg" alt="Screenshot 1"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                                <img src="game1_screenshot2.jpg" alt="Screenshot 2"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                                <img src="game1_screenshot3.jpg" alt="Screenshot 3"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                                <img src="game1_screenshot4.jpg" alt="Screenshot 4"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="link-container">
                     <li class="github-container">
                         <a href="https://github.com/mamavon1104/shooting2D.git" class="links">
@@ -59,8 +88,8 @@
                         </a>
                     </li>
                     <li class="youtube-container">
-                        <a href="https://youtu.be/RszxIxJ2oz8" class="links">
-                            <img src="images/Youtube.png" class="link-image cap" alt="GitHub"
+                        <a href="#" class="links">
+                            <img src="images/Youtube.png" class=" link-image cap" alt="GitHub"
                                 data-tippy-content="クリックするとyoutubeに飛びます!">
                         </a>
                     </li>
@@ -81,6 +110,36 @@
                         この作品を作りながら勉強しました。<br>
                     </p>
                 </div>
+                <div class="media-overlay" style="display: none;">
+                    <div class="media-content">
+                        <button class="close-button">&times;</button>
+                        <div class="media-tabs">
+                            <button class="tab-button active" data-tab="trailer">トレーラー</button>
+                            <button class="tab-button" data-tab="screenshots">スクリーンショット</button>
+                        </div>
+                        <div class="tab-content trailer active">
+                            <video controls poster="game1_thumbnail.jpg" width="100%">
+                                <source src="game1_trailer.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="tab-content screenshots">
+                            <div class="screenshot-main">
+                                <img src="game1_screenshot1.jpg" alt="Screenshot 1" id="main-screenshot-1">
+                            </div>
+                            <div class="screenshot-thumbnails">
+                                <img src="game1_screenshot1.jpg" alt="Screenshot 1"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                                <img src="game1_screenshot2.jpg" alt="Screenshot 2"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                                <img src="game1_screenshot3.jpg" alt="Screenshot 3"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                                <img src="game1_screenshot4.jpg" alt="Screenshot 4"
+                                    onclick="changeMainScreenshot(this.src, 1)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="link-container">
                     <li class="github-container">
                         <a href="https://github.com/mamavon1104/animalGame" class="links">
@@ -95,8 +154,8 @@
                         </a>
                     </li>
                     <li class="youtube-container">
-                        <a href="https://youtu.be/oxkTjzeUkec" class="links">
-                            <img src="images/Youtube.png" class="link-image cap" alt="GitHub"
+                        <a href="#" class="links">
+                            <img src="images/Youtube.png" class=" link-image cap" alt="GitHub"
                                 data-tippy-content="クリックするとyoutubeに飛びます!">
                         </a>
                     </li>
@@ -117,11 +176,11 @@
                     </p>
                 </div>
                 <ul class="link-container">
-                    <li class="unityroom-container">
-                        <button onclick="window.location.href='zips/KoumuNoMori.zip'" class="download-button">
-                            <img src="images/game_zip.png" class="link-image cap" alt="Download Game"
-                                data-tippy-content="ゲームのzipファイルをダウンロードします!">
-                        </button>
+                    <li class="github">
+                        <a href="https://github.com/Hikanyan/AcquireGameJam-2023" class="links">
+                            <img src="images/GitHub.png" class="link-image cap" alt="GitHub"
+                                data-tippy-content="クリックするとgithubに飛びます!">
+                        </a>
                     </li>
                     <li class="youtube-container">
                         <a href="https://youtu.be/jDqVXS9-gls" class="links">
