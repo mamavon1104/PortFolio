@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
+    tippy('[data-tippy-content]');
+
     const imagesDiv = document.getElementById("images");
     const ulElements = imagesDiv.querySelectorAll("ul");
    
@@ -44,87 +46,94 @@ document.addEventListener("DOMContentLoaded", function() {
             linkContainer.style.left = "15%";
         }
     });
-});
 
-// モーダルウィンドウとコンテンツ制御のためのJavaScript
-const modal = document.getElementById('myModal');
-const modalContent = document.getElementById('modalContent');
-const close = document.getElementsByClassName('close')[0];
+    const modal = document.getElementById('myModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
 
-// ゲームごとのコンテンツデータ
-const gameContents = {
-    'ColorBullet': [
-        { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
-        { type: 'image', src: 'images/game_icon/ColorBulletIcon.png' },
-        { type: 'video', src: 'path/to/ColorBullet.mp4' }
-    ],
-    'AnimalEscape': [
-        { type: 'youtube', src: 'https://www.youtube.com/embed/oxkTjzeUkec' },
-        { type: 'image', src: 'images/game_icon/AnimalEscapeIcon.png' },
-        { type: 'video', src: 'path/to/AnimalEscape.mp4' }
-    ],
-    '夢現少女': [
-        { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
-        { type: 'image', src: 'images/game_icon/夢現少女Icon.png' },
-        { type: 'video', src: 'path/to/夢現少女.mp4' }
-    ],
-    '紅霧の森': [
-        { type: 'youtube', src: 'https://www.youtube.com/embed/FQvlzyBUwF8' },
-        { type: 'image', src: 'images/game_icon/紅霧の森Icon.png' },
-        { type: 'video', src: 'path/to/紅霧の森.mp4' }
-    ]
-};
+    // ゲームごとのコンテンツデータ
+    const gameContents = {
+        'ColorBullet': [
+            { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
+            { type: 'image', src: 'images/game_icon/ColorBulletIcon.png' },
+            { type: 'text', content: 'ColorBulletは、4色のキャラクターが自分のスコアのために他の3色を倒し合うシューティングゲームです。メニュー画面の背景アニメーションなど、常に動いている画面を特徴としています。' }
+        ],
+        'AnimalEscape': [
+            { type: 'youtube', src: 'https://www.youtube.com/embed/oxkTjzeUkec' },
+            { type: 'image', src: 'images/game_icon/AnimalEscapeIcon.png' },
+            { type: 'text', content: 'AnimalEscapeは、自分の相棒を抱えて投げてジャンプする脱出を目指すアクションゲームです。簡単な操作で楽しめる優しいアクションゲームとなっています。' }
+        ],
+        '夢現少女': [
+            { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
+            { type: 'image', src: 'images/game_icon/夢現少女Icon.png' },
+            { type: 'text', content: '夢現少女は、少女が不思議な世界を冒険する3Dアクションアドベンチャーゲームです。3Dの操作感や、カメラワークにこだわって制作しました。' }
+        ],
+        '紅霧の森': [
+            { type: 'youtube', src: 'https://www.youtube.com/embed/FQvlzyBUwF8' },
+            { type: 'image', src: 'images/game_icon/紅霧の森Icon.png' },
+            { type: 'text', content: '紅霧の森は、人形から逃げる薄暗く赤いホラーゲームです。学校の文化祭で制作し、マップの作成とカメラの切り替えを担当しました。' }
+        ]
+    };
 
-let currentGameKey = '';
-let currentContentIndex = 0;
+    let currentGameKey = '';
+    let currentContentIndex = 0;
 
-function openModal(gameKey, index = 0) {
-    modal.style.display = 'block';
-    currentGameKey = gameKey;
-    currentContentIndex = index;
-    showContent();
-}
-
-function showContent() {
-    const content = gameContents[currentGameKey][currentContentIndex];
-    let html = '';
-    switch(content.type) {
-        case 'youtube':
-            html = `<iframe width="100%" height="400" src="${content.src}" frameborder="0" allowfullscreen></iframe>`;
-            break;
-        case 'image':
-            html = `<img src="${content.src}" style="width:100%">`;
-            break;
-        case 'video':
-            html = `<video width="100%" controls><source src="${content.src}" type="video/mp4"></video>`;
-            break;
+    function openModal(gameKey) {
+        modal.style.display = 'block';
+        currentGameKey = gameKey;
+        currentContentIndex = 0;
+        showContent();
     }
-    modalContent.innerHTML = html;
-}
 
-function changeContent(n) {
-    currentContentIndex += n;
-    const contentLength = gameContents[currentGameKey].length;
-    if (currentContentIndex >= contentLength) currentContentIndex = 0;
-    if (currentContentIndex < 0) currentContentIndex = contentLength - 1;
-    showContent();
-}
+    function showContent() {
+        const content = gameContents[currentGameKey][currentContentIndex];
+        let html = '';
+        switch(content.type) {
+            case 'youtube':
+                html = `<iframe width="100%" height="640" src="${content.src}" frameborder="0" allowfullscreen></iframe>`;
+                break;
+            case 'image':
+                html = `<img src="${content.src}" style="max-width:100%; height:auto;">`;
+                break;
+            case 'text':
+                html = `<p style="color: white; font-size: 18px; text-align: center;">${content.content}</p>`;
+                break;
+        }
+        modalContent.innerHTML = html;
+    }
 
-close.onclick = function() {
-    modal.style.display = 'none';
-}
+    function changeContent(n) {
+        currentContentIndex += n;
+        const contentLength = gameContents[currentGameKey].length;
+        if (currentContentIndex >= contentLength) currentContentIndex = 0;
+        if (currentContentIndex < 0) currentContentIndex = contentLength - 1;
+        showContent();
+    }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
+    // 各ゲームアイコンとYouTubeアイコンにクリックイベントを追加
+    document.querySelectorAll('.image-container, .youtube-container').forEach((element) => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            const gameKey = this.closest('.image-container').dataset.gameKey;
+            openModal(gameKey);
+        });
+    });
+
+    closeBtn.onclick = function() {
         modal.style.display = 'none';
     }
-}
 
-// 各ゲームのYouTube関連のコンテナにクリックイベントを追加
-document.querySelectorAll('.youtube-container').forEach((container) => {
-    container.onclick = function(e) {
-        e.preventDefault(); // デフォルトのリンク動作を防止
-        const gameKey = this.closest('.image-container').querySelector('.game-icon').alt.split(' ')[0];
-        openModal(gameKey);
-    };
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    prevBtn.addEventListener('click', () => changeContent(-1));
+    nextBtn.addEventListener('click', () => changeContent(1));
+
+    // Tippyの初期化
+    tippy('[data-tippy-content]');
 });

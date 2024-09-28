@@ -230,8 +230,10 @@ body {
     background-color: rgba(0,0,0,0.9);
 }
 .modal-content {
-    margin: auto;
-    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     max-width: 700px;
 }

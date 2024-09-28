@@ -36,7 +36,7 @@
     <section id="my_game">
         <div class="separator text-center">作ったゲーム</div>
         <ul id="imageList">
-            <li class="image-container">
+            <li class="image-container" data-game-key="ColorBullet">
                 <img src="images/game_icon/ColorBulletIcon.png" alt="Color Bullet Icon" class="game-icon">
                 <div class="image-text">
                     <p class="description-text">
@@ -48,24 +48,22 @@
                         色が好きだったので、色にまつわるゲームを作りました。<br>
                         メニュー画面の裏のアニメーションなど、常に動いている画面を作りました。<br><br>
                         対戦ゲームとコントローラーの接続両方を初めてやったゲームで、<br>
-                        UIとコントローラーの接続で開発が難航しました。<br>
+                        UIとコントローラーの接続で開発が難航しました。
                     </p>
                 </div>
                 <ul class="link-container">
                     <li class="github-container">
-                        <a href="https://github.com/mamavon1104/shooting2D.git" class="links">
-                            <img src="images/GitHub.png" class="link-image cap" alt="GitHub"
-                                data-tippy-content="クリックするとgithubに飛びます!">
+                        <a href="https://github.com/mamavon1104/shooting2D.git" class="links"
+                            data-tippy-content="クリックするとgithubに飛びます!">
+                            <img src="images/GitHub.png" class="link-image" alt="GitHub">
                         </a>
                     </li>
                     <li class="youtube-container">
-                        <a href="https://youtu.be/RszxIxJ2oz8" class="links">
-                            <img src="images/Youtube.png" class="link-image cap" alt="GitHub"
-                                data-tippy-content="クリックするとyoutubeに飛びます!">
+                        <a href="#" class="links" data-tippy-content="クリックすると動画が表示されます!">
+                            <img src="images/Youtube.png" class="link-image" alt="YouTube">
                         </a>
                     </li>
                 </ul>
-
             </li>
             <li class="image-container">
                 <img src="images/game_icon/AnimalEscapeIcon.png" alt="Animal Escape Icon" class="game-icon">
@@ -213,11 +211,5 @@
     <div class="separator thin-separator"></div>
     <div></div>
 </body>
-
-<!--ツールチップを出すためのJS-->
-<script src="https://unpkg.com/popper.js@1"></script>
-<script src="https://unpkg.com/tippy.js@5"></script>
-<!--ツールチップのJSを制御するためのJS-->
-<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/9-3-1/js/9-3-1.js"></script>
 
 </html>
