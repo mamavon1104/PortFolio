@@ -65,6 +65,7 @@
                         </a>
                     </li>
                 </ul>
+
             </li>
             <li class="image-container">
                 <img src="images/game_icon/AnimalEscapeIcon.png" alt="Animal Escape Icon" class="game-icon">
@@ -117,15 +118,21 @@
                     </p>
                 </div>
                 <ul class="link-container">
-                    <li class="unityroom-container">
-                        <button onclick="window.location.href='zips/KoumuNoMori.zip'" class="download-button">
-                            <img src="images/game_zip.png" class="link-image cap" alt="Download Game"
-                                data-tippy-content="ゲームのzipファイルをダウンロードします!">
-                        </button>
+                    <li class="github-container">
+                        <a href="https://github.com/Hikanyan/AcquireGameJam-2023" class="links">
+                            <img src="images/GitHub.png" class="link-image cap" alt="GitHub"
+                                data-tippy-content="クリックするとgithubに飛びます!">
+                        </a>
                     </li>
                     <li class="youtube-container">
                         <a href="https://youtu.be/jDqVXS9-gls" class="links">
                             <img src="images/Youtube.png" class="link-image cap" alt="GitHub"
+                                data-tippy-content="クリックするとyoutubeに飛びます!">
+                        </a>
+                    </li>
+                    <li class="zip-container">
+                        <a href="https://youtu.be/jDqVXS9-gls" class="links">
+                            <img src="images/game_zip.png" class="link-image cap" alt="GitHub"
                                 data-tippy-content="クリックするとyoutubeに飛びます!">
                         </a>
                     </li>
@@ -197,6 +204,12 @@
             </ul>
         </div>
     </section>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content" id="modalContent"></div>
+        <a class="nav-button prev" onclick="changeContent(-1)">&#10094;</a>
+        <a class="nav-button next" onclick="changeContent(1)">&#10095;</a>
+    </div>
     <div class="separator thin-separator"></div>
     <div></div>
 </body>
