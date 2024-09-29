@@ -57,23 +57,47 @@ document.addEventListener("DOMContentLoaded", function() {
     const gameContents = {
         'ColorBullet': [
             { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
+            { type: 'video', src: 'videos/ColorBullet_gameplay.mp4' },
             { type: 'image', src: 'images/game_icon/ColorBulletIcon.png' },
-            { type: 'text', content: 'ColorBulletは、4色のキャラクターが自分のスコアのために他の3色を倒し合うシューティングゲームです。メニュー画面の背景アニメーションなど、常に動いている画面を特徴としています。' }
         ],
         'AnimalEscape': [
             { type: 'youtube', src: 'https://www.youtube.com/embed/oxkTjzeUkec' },
+            { type: 'video', src: 'videos/AnimalEscape_gameplay.mp4' },
             { type: 'image', src: 'images/game_icon/AnimalEscapeIcon.png' },
-            { type: 'text', content: 'AnimalEscapeは、自分の相棒を抱えて投げてジャンプする脱出を目指すアクションゲームです。簡単な操作で楽しめる優しいアクションゲームとなっています。' }
         ],
         '夢現少女': [
             { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
+            { type: 'video', src: 'videos/夢現少女_gameplay.mp4' },
             { type: 'image', src: 'images/game_icon/夢現少女Icon.png' },
-            { type: 'text', content: '夢現少女は、少女が不思議な世界を冒険する3Dアクションアドベンチャーゲームです。3Dの操作感や、カメラワークにこだわって制作しました。' }
         ],
         '紅霧の森': [
             { type: 'youtube', src: 'https://www.youtube.com/embed/FQvlzyBUwF8' },
+            { type: 'video', src: 'videos/紅霧の森_gameplay.mp4' },
             { type: 'image', src: 'images/game_icon/紅霧の森Icon.png' },
-            { type: 'text', content: '紅霧の森は、人形から逃げる薄暗く赤いホラーゲームです。学校の文化祭で制作し、マップの作成とカメラの切り替えを担当しました。' }
+        ]
+    };
+
+    // ゲームごとのテキストデータ
+    const gameTexts = {
+        'ColorBullet': [
+            'ColorBulletは、4色のキャラクターが自分のスコアのために他の3色を倒し合うシューティングゲームです。',
+            'ゲームアイコン',
+            'ゲームプレイの様子'
+        ],
+        'AnimalEscape': [
+            'AnimalEscapeは、自分の相棒を抱えて投げてジャンプする脱出を目指すアクションゲームです。',
+            'ゲームアイコン',
+            'ゲームプレイの様子'
+        ],
+        '夢現少女': [
+            '夢現少女は、少女が不思議な世界を冒険する3Dアクションアドベンチャーゲームです。',
+            'ゲームアイコン',
+            'ゲームプレイの様子'
+        ],
+        '紅霧の森': [
+            '紅霧の森は、人形から逃げる薄暗く赤いホラーゲームです。',
+            'ゲームアイコン',
+            'ゲームプレイの様子'
         ]
     };
 
@@ -89,19 +113,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showContent() {
         const content = gameContents[currentGameKey][currentContentIndex];
+        const text = gameTexts[currentGameKey][currentContentIndex] || "";
         let html = '';
+
         switch(content.type) {
             case 'youtube':
-                html = `<iframe width="100%" height="640" src="${content.src}" frameborder="0" allowfullscreen></iframe>`;
+                html = `<iframe width="100%" height="400vh" src="${content.src}" frameborder="0" allowfullscreen style="display: block; margin: 0 auto;"></iframe>`;
                 break;
             case 'image':
-                html = `<img src="${content.src}" style="max-width:100%; height:auto;">`;
+                html = `<img src="${content.src}" style="width="100%" height="400vh"; display: block; margin: 0 auto;">`;
                 break;
-            case 'text':
-                html = `<p style="color: white; font-size: 18px; text-align: center;">${content.content}</p>`;
+            case 'video':
+                html = `<video width="100%" height="400vh" controls style="display: block; margin: 0 auto;"><source src="${content.src}" type="video/mp4">Your browser does not support the video tag.</video>`;
                 break;
         }
-        modalContent.innerHTML = html;
+
+        modalContent.innerHTML = `
+            ${html}
+            <p style="color: white; font-size: 18px; text-align: center; max-width: 90%; margin: 10px auto 0;">${text}</p>
+        `;
     }
 
     function changeContent(n) {
