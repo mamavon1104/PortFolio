@@ -142,8 +142,8 @@ document.addEventListener("DOMContentLoaded", function() {
         showContent();
     }
 
-    // 各ゲームアイコンとYouTubeアイコンにクリックイベントを追加
-    document.querySelectorAll('.image-container, .youtube-container').forEach((element) => {
+    // YouTubeアイコンにのみクリックイベントを追加
+    document.querySelectorAll('.youtube-container').forEach((element) => {
         element.addEventListener('click', function(e) {
             e.preventDefault();
             const gameKey = this.closest('.image-container').dataset.gameKey;
