@@ -128,10 +128,45 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
         }
 
+        // コンテンツインジケーターを作成
+        const totalContents = gameContents[currentGameKey].length;
+        let indicators = '';
+        for (let i = 0; i < totalContents; i++) {
+            if (i === currentContentIndex) {
+                indicators += getFilledSymbol(i);
+            } else {
+                indicators += getEmptySymbol(i);
+            }
+        }
+
         modalContent.innerHTML = `
             ${html}
             <p style="color: white; font-size: 18px; text-align: center; max-width: 90%; margin: 10px auto 0;">${text}</p>
+            <div style="color: white; font-size: 24px; text-align: center; margin-top: 10px;">
+                ${indicators}
+            </div>
+            <p style="color: white; font-size: 16px; text-align: center; margin-top: 5px;">
+                ${currentContentIndex + 1} / ${totalContents}
+            </p>
         `;
+    }
+
+    function getEmptySymbol(index) {
+        switch(index) {
+            case 0: return '☆';
+            case 1: return '○';
+            case 2: return '△';
+            default: return '□';
+        }
+    }
+
+    function getFilledSymbol(index) {
+        switch(index) {
+            case 0: return '★';
+            case 1: return '●';
+            case 2: return '▲';
+            default: return '■';
+        }
     }
 
     function changeContent(n) {
@@ -141,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (currentContentIndex < 0) currentContentIndex = contentLength - 1;
         showContent();
     }
-
     // YouTubeアイコンにのみクリックイベントを追加
     document.querySelectorAll('.youtube-container').forEach((element) => {
         element.addEventListener('click', function(e) {
