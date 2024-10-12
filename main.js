@@ -57,15 +57,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const gameContents = {
         'ColorBullet': [
             { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
-            { type: 'video', src: 'images/contents/animal/ItemCatch.mp4' },
-            { type: 'image', src: 'images/game_icon/ColorBulletIcon.png' },
+            { type: 'video', src: 'images/contents/color/1Player.mp4'  },
+            { type: 'image', src: 'images/contents/color/4Player.mp4'},
         ],
         'AnimalEscape': [
             { type: 'youtube', src: 'https://www.youtube.com/embed/oxkTjzeUkec' },
             { type: 'video', src: 'images/contents/animal/ItemCatch.mp4'  },
             { type: 'video', src: 'images/contents/animal/PlayerThrow.mp4'  },
             { type: 'video', src: 'images/contents/animal/AudioSetting.mp4'  },
-            { type: 'image', src: 'images/contents/animal/Game.png' },
+            { type: 'image', src: 'images/contents/animal/game.png' },
         ],
         '夢現少女': [
             { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
