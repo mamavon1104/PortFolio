@@ -56,26 +56,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // ゲームごとのコンテンツデータ
     const gameContents = {
         'ColorBullet': [
-            { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
+            { type: 'video', src: 'images/contents/color/1Player.mp4'  },
             { type: 'video', src: 'images/contents/color/1Player.mp4'  },
             { type: 'image', src: 'images/contents/color/4Player.mp4'},
+            { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
         ],
         'AnimalEscape': [
-            { type: 'youtube', src: 'https://www.youtube.com/embed/oxkTjzeUkec' },
             { type: 'video', src: 'images/contents/animal/ItemCatch.mp4'  },
             { type: 'video', src: 'images/contents/animal/PlayerThrow.mp4'  },
             { type: 'video', src: 'images/contents/animal/AudioSetting.mp4'  },
             { type: 'image', src: 'images/contents/animal/game.png' },
+            { type: 'youtube', src: 'https://www.youtube.com/embed/oxkTjzeUkec' },
         ],
         '夢現少女': [
-            { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
             { type: 'video', src: 'videos/夢現少女_gameplay.mp4' },
             { type: 'image', src: 'images/game_icon/夢現少女Icon.png' },
+            { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
         ],
         '紅霧の森': [
-            { type: 'youtube', src: 'https://www.youtube.com/embed/FQvlzyBUwF8' },
             { type: 'video', src: 'videos/紅霧の森_gameplay.mp4' },
             { type: 'image', src: 'images/game_icon/紅霧の森Icon.png' },
+            { type: 'youtube', src: 'https://www.youtube.com/embed/FQvlzyBUwF8' },
         ]
     };
 
