@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const gameContents = {
         'ColorBullet': [
             { type: 'video', src: 'images/contents/color/1Player.mp4'  },
-            { type: 'video', src: 'images/contents/color/1Player.mp4'  },
-            { type: 'image', src: 'images/contents/color/4Player.mp4'},
+            { type: 'video', src: 'images/contents/color/4Player.mp4'},
+            { type: 'image', src: 'images/contents/color/ランキング.mp4'  },
             { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
         ],
         'AnimalEscape': [
@@ -74,33 +74,40 @@ document.addEventListener("DOMContentLoaded", function() {
             { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
         ],
         '紅霧の森': [
-            { type: 'video', src: 'videos/紅霧の森_gameplay.mp4' },
-            { type: 'image', src: 'images/game_icon/紅霧の森Icon.png' },
-            { type: 'youtube', src: 'https://www.youtube.com/embed/FQvlzyBUwF8' },
+            { type: 'video', src: 'images/contents/koumu/AudioReverbZone1.mp4'  },
+            { type: 'video', src: 'images/contents/koumu/AudioReverbZone2.mp4'  },
+            { type: 'video', src: 'images/contents/koumu/ARCode.mp4'  },
+            { type: 'image', src: 'images/contents/koumu/Death.png' },
+            { type: 'youtube', src: 'https://www.youtube.com/embed/GTQlX5eRgXk' },
         ]
     };
 
     // ゲームごとのテキストデータ
     const gameTexts = {
         'ColorBullet': [
-            'ColorBulletは、4色のキャラクターが自分のスコアのために他の3色を倒し合うシューティングゲームです。',
-            'ゲームアイコン',
-            'ゲームプレイの様子'
+            'コントローラーによってアニメーションが変わるタイトル画面(Player: 1)です。',
+            'コントローラーによってアニメーションが変わるタイトル画面(Player: 4)です。',
+            'プレイヤーが4人いた時のトータル画面の表示方法です。',
+            'ゲームプレイの様子(youtube)です。'
         ],
         'AnimalEscape': [
-            'AnimalEscapeは、自分の相棒を抱えて投げてジャンプする脱出を目指すアクションゲームです。',
-            'ゲームアイコン',
-            'ゲームプレイの様子'
+            'プレイヤーがアイテムをキャッチして扉を開ける映像です。',
+            'もう一人のプレイヤーをキャッチして遠くまで投げている映像です。',
+            'オーディオ設定している場面の映像です。',
+            'ゲーム中に可愛いくてポップな場面もあります😏',
+            'ゲームプレイの様子(youtube)です。'
         ],
         '夢現少女': [
             '夢現少女は、少女が不思議な世界を冒険する3Dアクションアドベンチャーゲームです。',
             'ゲームアイコン',
-            'ゲームプレイの様子'
+            'ゲームプレイの様子(youtube)です。'
         ],
         '紅霧の森': [
-            '紅霧の森は、人形から逃げる薄暗く赤いホラーゲームです。',
-            'ゲームアイコン',
-            'ゲームプレイの様子'
+            'AudioReverbZoneを使用した音の反響(1)です。',
+            'AudioReverbZoneを使用した音の反響(2)です。',
+            'ArucoUnityによってARコードをカメラで認識している動画です。',
+            '死亡時の画像',
+            'ゲームプレイの様子(youtube)です。'
         ]
     };
 
