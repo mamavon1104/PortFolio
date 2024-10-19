@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // ゲームごとのコンテンツデータ
     const gameContents = {
         'ColorBullet': [
-            { type: 'video', src: 'images/contents/color/1Player.mp4'  },
-            { type: 'video', src: 'images/contents/color/4Player.mp4'},
-            { type: 'image', src: 'images/contents/color/ランキング.mp4'  },
+            { type: 'video', src: 'images/contents/color/Player1.mp4'  },
+            { type: 'video', src: 'images/contents/color/Player4.mp4'},
+            { type: 'video', src: 'images/contents/color/Ranking.mp4'  },
             { type: 'youtube', src: 'https://www.youtube.com/embed/RszxIxJ2oz8' },
         ],
         'AnimalEscape': [
@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
             { type: 'youtube', src: 'https://www.youtube.com/embed/oxkTjzeUkec' },
         ],
         '夢現少女': [
-            { type: 'video', src: 'videos/夢現少女_gameplay.mp4' },
-            { type: 'image', src: 'images/game_icon/夢現少女Icon.png' },
+            { type: 'image', src: 'images/contents/yumemi/title.png' },
+            { type: 'image', src: 'images/contents/yumemi/rule.png' },
             { type: 'youtube', src: 'https://www.youtube.com/embed/jDqVXS9-gls' },
         ],
         '紅霧の森': [
@@ -128,13 +128,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         switch(content.type) {
             case 'youtube':
-                html = `<iframe width="100%" height="400vh" src="${content.src}" frameborder="0" allowfullscreen style="display: block; margin: 0 auto;"></iframe>`;
+                html = `<iframe width="150%" height="600vh" src="${content.src}" frameborder="0" allowfullscreen  style="display: block; margin-left: -25%; position: relative;"></iframe>`;
                 break;
             case 'image':
-                html = `<img src="${content.src}" style="width="100%" height="400vh"; display: block; margin: 0 auto;">`;
+                html = `<img src="${content.src}" width="150%" height="600vh" controls style="display: block; margin-left: -25%; position: relative;">`;
                 break;
             case 'video':
-                html = `<video width="100%" height="400vh" controls style="display: block; margin: 0 auto;"><source src="${content.src}" type="video/mp4">Your browser does not support the video tag.</video>`;
+                html = `<video width="150%" height="600vh" controls style="display: block; margin-left: -25%; position: relative;"><source src="${content.src}" type="video/mp4">Your browser does not support the video tag.</video>`;
                 break;
         }
 
@@ -142,10 +142,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const totalContents = gameContents[currentGameKey].length;
         let indicators = '';
         for (let i = 0; i < totalContents; i++) {
+            const content = gameContents[currentGameKey][i];
             if (i === currentContentIndex) {
-                indicators += getFilledSymbol(i);
+                indicators += getFilledSymbol(content.type);
             } else {
-                indicators += getEmptySymbol(i);
+                indicators += getEmptySymbol(content.type);
             }
         }
 
@@ -161,21 +162,21 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    function getEmptySymbol(index) {
-        switch(index) {
-            case 0: return '☆';
-            case 1: return '○';
-            case 2: return '△';
-            default: return '□';
+    function getEmptySymbol(contentType) {
+        switch(contentType) {
+            case 'video': return '□';
+            case 'image': return '○';
+            case 'youtube': return '☆';
+            default: return '△';
         }
     }
-
-    function getFilledSymbol(index) {
-        switch(index) {
-            case 0: return '★';
-            case 1: return '●';
-            case 2: return '▲';
-            default: return '■';
+    
+    function getFilledSymbol(contentType) {
+        switch(contentType) {
+            case 'video': return '■';
+            case 'image': return '●';
+            case 'youtube': return '★';
+            default: return '▲';
         }
     }
 
