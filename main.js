@@ -80,6 +80,13 @@ document.addEventListener("DOMContentLoaded", function() {
             { type: 'image', src: 'images/contents/koumu/Death.png' },
             { type: 'youtube', src: 'https://www.youtube.com/embed/GTQlX5eRgXk' },
         ]
+        'MagnetPlanet': [
+            { type: 'video', src: 'images/contents/koumu/AudioReverbZone1.mp4'  },
+            { type: 'video', src: 'images/contents/koumu/AudioReverbZone2.mp4'  },
+            { type: 'video', src: 'images/contents/koumu/ARCode.mp4'  },
+            { type: 'image', src: 'images/contents/koumu/Death.png' },
+            { type: 'youtube', src: 'https://youtu.be/UKYhUhxPLYI' },
+        ]
     };
 
     // ゲームごとのテキストデータ
