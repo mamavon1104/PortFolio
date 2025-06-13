@@ -4,16 +4,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const imagesDiv = document.getElementById("images");
     const ulElements = imagesDiv.querySelectorAll("ul");
    
-    const colors = [
+    const skillColorArray = [
         'linear-gradient(to right, #FFC1CC, #FFD1DC, #FFE1EC, #FFF1FC)',
         'linear-gradient(to right, #FFFACD, #FFFBD0, #FFFBF0, #FFFDE0)',
         'linear-gradient(to right, #E0F8E0, #D0F8D0, #C0F8C0, #B0F8B0)',
     ];
+    const gameColorArray = [
+        'linear-gradient(to left, #FFF0B8, #FFF0B8, #FFD782)',
+        'linear-gradient(to right, #CEF5FF, #E7C7FF)',
+        'linear-gradient(to left, #E4F7D4, #E4F7D4, #B8E986)',
+        'linear-gradient(to left, #8b0000, #320000, #320000, #320000, #000000, #000000)',
+        'linear-gradient(to left,rgb(203, 211, 255),rgb(255, 204, 244),rgb(255, 156, 156))',
+    ];
     let colorIndex = 0;
    
     ulElements.forEach((ul) => {
-        ul.style.background = colors[colorIndex];
-        colorIndex = (colorIndex + 1) % colors.length;
+        ul.style.background = skillColorArray[colorIndex];
+        colorIndex = (colorIndex + 1) % skillColorArray.length;
     });
    
     const imageList = document.getElementById("imageList");
@@ -29,22 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
         if (index % 2 === 0) {
             images[0].style.marginRight = "auto";
             images[0].style.marginLeft = "10%";
-            container.style.background = 'linear-gradient(to left, #FFF0B8, #FFF0B8, #FFD782)';
             imageText.style.left = "30%";
             linkContainer.style.right = "20%";
-        } else if (index !== 3) {
-            images[0].style.marginLeft = "auto";
-            images[0].style.marginRight = "10%";
-            container.style.background = 'linear-gradient(to right, #CEF5FF, #E7C7FF)';
-            imageText.style.right = "32%";
-            linkContainer.style.left = "15%";
         } else {
             images[0].style.marginLeft = "auto";
             images[0].style.marginRight = "10%";
-            container.style.background = 'linear-gradient(to left, #8b0000, #320000, #320000, #320000, #000000, #000000)';
             imageText.style.right = "32%";
             linkContainer.style.left = "15%";
         }
+        container.style.background = gameColorArray[index];
     });
 
     const modal = document.getElementById('myModal');
@@ -79,14 +79,14 @@ document.addEventListener("DOMContentLoaded", function() {
             { type: 'video', src: 'images/contents/koumu/ARCode.mp4'  },
             { type: 'image', src: 'images/contents/koumu/Death.png' },
             { type: 'youtube', src: 'https://www.youtube.com/embed/GTQlX5eRgXk' },
-        ]
+        ],
         'MagnetPlanet': [
             { type: 'video', src: 'images/contents/koumu/AudioReverbZone1.mp4'  },
             { type: 'video', src: 'images/contents/koumu/AudioReverbZone2.mp4'  },
             { type: 'video', src: 'images/contents/koumu/ARCode.mp4'  },
             { type: 'image', src: 'images/contents/koumu/Death.png' },
             { type: 'youtube', src: 'https://youtu.be/UKYhUhxPLYI' },
-        ]
+        ],
     };
 
     // ゲームごとのテキストデータ
@@ -115,7 +115,14 @@ document.addEventListener("DOMContentLoaded", function() {
             'ArucoUnityによってARコードをカメラで認識している動画です。',
             '死亡時の画像',
             'ゲームプレイの様子(youtube)です。'
-        ]
+        ],
+        'MagnetPlanet': [
+            'AudioReverbZoneを使用した音の反響(1)です。',
+            'AudioReverbZoneを使用した音の反響(2)です。',
+            'ArucoUnityによってARコードをカメラで認識している動画です。',
+            '死亡時の画像',
+            'ゲームプレイの様子(youtube)です。'
+        ],
     };
 
     let currentGameKey = '';
