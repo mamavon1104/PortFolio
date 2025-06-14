@@ -115,13 +115,6 @@ body {
     padding-left: 15px;
 }
 
-#Skill {
-    background-color: #000000;
-    padding: 10px 0;
-    z-index: 100;
-    position: relative;
-}
-
 .skill-list {
     display: flex;
     padding: 2px;
